@@ -1,7 +1,8 @@
-.body {
+body {
     margin: 0px;
     padding: 0px;
     font-family: "Bookman", Georgia, "Times New Roman", serif;
+    background-color: #45CEEF;
 }
 
 .containers-background {
@@ -21,4 +22,9 @@
     text-align: center;
     font: 12px/20px Helvetica,arial,sans-serif;
     background-color: #15748B;
+}
+
+#container {
+    background-color: #45CEEF;
+    padding: 0 20px;
 }

@@ -20,13 +20,14 @@
 </header>
 
 <!-- Content container -->
-<div id="main-wrapper" class="container">
+<div id="wrapper" class="container">
     <!-- Navigation container -->
     <nav class="col-sm-3 jumbotron containers-background" data-ng-controller="NavigationController">
         <data-ng-include src="navigationPath"></data-ng-include>
     </nav>
 
-    <div class="col-sm-12 jumbotron containers-background">
+    <!-- Main content container -->
+    <div id="container" class="col-sm-9 jumbotron">
         <data-ng-view></data-ng-view>
     </div>
 </div>
@@ -36,10 +37,16 @@
 <script src="lib/angular/angular-resource.js"></script>
 <script src="lib/jquery-1.11.2.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/jquery.noty.js"></script>
 
 <!-- Scripts -->
 <script src="scripts/app.js"></script>
 
+<!-- Load Services -->
+<script src="scripts/services/authenticationService.js"></script>
+<script src="scripts/services/notifyService.js"></script>
+
+<!-- Load Controllers -->
 <script src="scripts/controllers/HomeController.js"></script>
 <script src="scripts/controllers/NavigationController.js"></script>
 <script src="scripts/controllers/HeaderController.js"></script>

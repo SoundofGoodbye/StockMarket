@@ -1,1 +1,47 @@
-<h1>Register</h1>
+<div class="jumbotron containers-background">
+
+    <h2>Register</h2>
+    <hr/>
+    <div class="row">
+        <form class="col-sm-12" data-ng-submit="callRegisterService()" data-ng-controller="UserController">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter username:"
+                           required="required" data-ng-model="userData.username"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email"
+                           placeholder="Enter email:" required="required" data-ng-model="userData.email"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password:"
+                           required="required" data-ng-model="userData.password"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" class="form-control" id="confirm-password"
+                           placeholder="Confirm password:" required="required" data-ng-model="userData.confirmPass"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="submit" value="Login" class="btn btn-lg btn-success col-sm-12"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
