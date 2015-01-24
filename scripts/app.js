@@ -13,7 +13,6 @@ stockApp.factory('httpRequestInterceptor', function () {
                 'X-Parse-REST-API-Key': 'Q2SpKAtXki0EMkZNyAPTpfUuuGhkkJY3fhiZ887P',
                 'Content-Type': 'application/json'
             };
-            //config.headers = {};
             return config;
         }
     };

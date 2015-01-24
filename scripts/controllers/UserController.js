@@ -3,7 +3,14 @@ stockApp.controller('UserController', function ($scope, $location, authService, 
     $scope.userData = {};
 
     $scope.callLoginService = function () {
-
+        authService.login($scope.userData,
+            function success(data) {
+                notifyService.showInfo("Login successful.");
+                $location.path('/');
+            },
+            function error(error) {
+                notifyService.showError("Login failed.", error);
+            });
     };
 
     $scope.callRegisterService = function () {
@@ -13,9 +20,16 @@ stockApp.controller('UserController', function ($scope, $location, authService, 
                 $location.path('/');
             },
             function error(error) {
-                notifyService.showError("Registration failed", error);
+                notifyService.showError("Registration failed.", error);
                 $scope.userData.password = "";
                 $scope.userData.confirmPass = "";
             });
+    };
+
+    $scope.logout = function () {
+        if (sessionStorage['currentUser']) {
+            sessionStorage.removeItem('currentUser');
+        }
+        $location.path('/');
     };
 });
